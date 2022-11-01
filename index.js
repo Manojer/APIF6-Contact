@@ -2,7 +2,7 @@ const { response } = require('express')
 const express = require('express')
 const nodemailer = require('nodemailer')
 const app = express()
-const port =5500
+//const port =3500
 
 
 
@@ -99,4 +99,5 @@ app.get('/',(req,res)=>{
     .catch(error=>res.status(500).send(error.message))
 })
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+//app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(process.env.PORT || 5600)
